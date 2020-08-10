@@ -15,7 +15,8 @@ app.get('/mean', (req, res, next) => {
 		throw new ExpressError(`${nums} is not a valid number`, 400)
 	}
 	try {
-		let numbers = req.query.nums.split(',')
+		console.log(req.query.nums)
+		let numbers = req.query.nums.split(',').map((val) => parseInt(val))
 
 		const result = {
 			response: {
@@ -35,7 +36,7 @@ app.get('/median', (req, res, next) => {
 		throw new ExpressError(`${nums} is not a valid number`, 400)
 	}
 	try {
-		let numbers = req.query.nums.split(',')
+		let numbers = req.query.nums.split(',').map((val) => parseInt(val))
 
 		const result = {
 			response: {
@@ -55,7 +56,7 @@ app.get('/mode', (req, res, next) => {
 		throw new ExpressError(`${nums} is not a valid number`, 400)
 	}
 	try {
-		let numbers = req.query.nums.split(',')
+		let numbers = req.query.nums.split(',').map((val) => parseInt(val))
 
 		const result = {
 			response: {

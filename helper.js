@@ -31,16 +31,4 @@ const mode = (arr) => {
 	return maxCount
 }
 
-// const checkError = (req, res, next) => {
-// 	try {
-// 		if (!req.query.nums) {
-// 			throw new ExpressError(`${nums} is not a valid number`, 400)
-// 		} else {
-// 			next()
-// 		}
-// 	} catch (err) {
-// 		return next(err)
-// 	}
-// }
-
-module.exports = { mean, median, mode, checkError }
+module.exports = { mean, median, mode }
